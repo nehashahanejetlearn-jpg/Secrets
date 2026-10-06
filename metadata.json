@@ -1,0 +1,6 @@
+{
+  "name": "Chamber of Secrets",
+  "description": "An enchanted, private interactive sanctuary and daily diary hidden deep within ancient castle vaults.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

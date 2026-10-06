@@ -1,0 +1,103 @@
+import { MoodConfig, MoodType } from '../types/diary';
+
+export const MOODS: MoodConfig[] = [
+  {
+    id: 'enchanted',
+    label: 'Enchanted',
+    icon: '✨',
+    colorHex: '#10b981',
+    glowColor: 'rgba(16, 185, 129, 0.5)',
+    borderClass: 'border-emerald-500/50',
+    bgClass: 'bg-emerald-950/40',
+    textClass: 'text-emerald-300',
+  },
+  {
+    id: 'joyful',
+    label: 'Joyful',
+    icon: '😊',
+    colorHex: '#f59e0b',
+    glowColor: 'rgba(245, 158, 11, 0.5)',
+    borderClass: 'border-amber-500/50',
+    bgClass: 'bg-amber-950/40',
+    textClass: 'text-amber-300',
+  },
+  {
+    id: 'adventurous',
+    label: 'Adventurous',
+    icon: '🧙',
+    colorHex: '#eab308',
+    glowColor: 'rgba(234, 179, 8, 0.5)',
+    borderClass: 'border-yellow-500/50',
+    bgClass: 'bg-yellow-950/40',
+    textClass: 'text-yellow-300',
+  },
+  {
+    id: 'calm',
+    label: 'Calm',
+    icon: '🌙',
+    colorHex: '#38bdf8',
+    glowColor: 'rgba(56, 189, 248, 0.5)',
+    borderClass: 'border-sky-500/50',
+    bgClass: 'bg-sky-950/40',
+    textClass: 'text-sky-300',
+  },
+  {
+    id: 'mysterious',
+    label: 'Mysterious',
+    icon: '😔',
+    colorHex: '#a855f7',
+    glowColor: 'rgba(168, 85, 247, 0.5)',
+    borderClass: 'border-purple-500/50',
+    bgClass: 'bg-purple-950/40',
+    textClass: 'text-purple-300',
+  },
+  {
+    id: 'frustrated',
+    label: 'Frustrated',
+    icon: '⚡',
+    colorHex: '#ef4444',
+    glowColor: 'rgba(239, 68, 68, 0.5)',
+    borderClass: 'border-rose-500/50',
+    bgClass: 'bg-rose-950/40',
+    textClass: 'text-rose-300',
+  },
+  {
+    id: 'grateful',
+    label: 'Grateful',
+    icon: '❤️',
+    colorHex: '#f43f5e',
+    glowColor: 'rgba(244, 63, 94, 0.5)',
+    borderClass: 'border-pink-500/50',
+    bgClass: 'bg-pink-950/40',
+    textClass: 'text-pink-300',
+  },
+  {
+    id: 'thoughtful',
+    label: 'Thoughtful',
+    icon: '🔮',
+    colorHex: '#8b5cf6',
+    glowColor: 'rgba(139, 92, 246, 0.5)',
+    borderClass: 'border-indigo-500/50',
+    bgClass: 'bg-indigo-950/40',
+    textClass: 'text-indigo-300',
+  },
+];
+
+export const SUGGESTED_TAGS = [
+  'School',
+  'Family',
+  'Friends',
+  'Adventure',
+  'Dreams',
+  'Achievement',
+  'Secret',
+  'Memories',
+  'Spells',
+  'Potions',
+  'Astronomy',
+  'Forest',
+];
+
+export const getMoodConfig = (mood: MoodType): MoodConfig => {
+  return MOODS.find((m) => m.id === mood) || MOODS[0];
+};

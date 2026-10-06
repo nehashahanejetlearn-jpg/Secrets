@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --chamber-emerald: #0b3d2e;
+    --chamber-gold: #d4af37;
+    --chamber-parchment: #f4ecd8;
+    --chamber-ink: #1a1612;
+  }
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-cinzel-decorative {
+  font-family: 'Cinzel Decorative', 'Cinzel', serif;
+}
+
+.font-fell {
+  font-family: 'IM Fell English', Georgia, serif;
+}
+
+.font-sans {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+/* Custom Scrollbar for gothic stone vibe */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d0b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e382b;
+  border-radius: 4px;
+  border: 1px solid #2d5540;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2d5540;
+}
+
+/* Candle flame animation */
+@keyframes flicker {
+  0%, 100% {
+    transform: scale(1) rotate(-1deg);
+    opacity: 0.95;
+    filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.8));
+  }
+  25% {
+    transform: scale(1.08, 0.95) rotate(1.5deg);
+    opacity: 1;
+    filter: drop-shadow(0 0 14px rgba(245, 158, 11, 0.9));
+  }
+  50% {
+    transform: scale(0.96, 1.05) rotate(-1deg);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 9px rgba(217, 119, 6, 0.7));
+  }
+  75% {
+    transform: scale(1.04, 0.98) rotate(1deg);
+    opacity: 0.98;
+    filter: drop-shadow(0 0 12px rgba(251, 191, 36, 0.85));
+  }
+}
+
+.animate-candle-flame {
+  animation: flicker 2.4s infinite ease-in-out;
+}
+
+/* Mystic Pulse */
+@keyframes mystic-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 6px rgba(16, 185, 129, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 18px rgba(52, 211, 153, 0.8));
+  }
+}
+
+.animate-mystic-glow {
+  animation: mystic-glow 3.5s infinite ease-in-out;
+}
+
+/* Golden Pulse */
+@keyframes gold-pulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.6);
+  }
+}
+
+.animate-gold-pulse {
+  animation: gold-pulse 3s infinite ease-in-out;
+}
+
+/* Subtle parchment ink glow when focused */
+.parchment-editor:focus {
+  outline: none;
+  box-shadow: inset 0 0 25px rgba(11, 61, 46, 0.12);
+}
